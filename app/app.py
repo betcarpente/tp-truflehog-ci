@@ -1,5 +1,6 @@
 # app.py
-WEBHOOK_URL = "COLLEZ_VOTRE_CLE_OU_WEBHOOK_ACTIF_ICI"
+API_KEY = "AKIAIOSFODNN7EXAMPLE"
+WEBHOOK_URL = "https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX"
 
 def notify():
     print("Sending alert...")
