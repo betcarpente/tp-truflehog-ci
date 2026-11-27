@@ -6,7 +6,7 @@ on:
         branches: ["main"]
 jobs:
   trufflehog:
-    name: Scan Verified Secrets
+    name: Scan Secrets
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -16,5 +16,5 @@ jobs:
       - name: TruffleHog OSS Scan
         uses: trufflesecurity/trufflehog@main
         with:
-          # Analyse tout le dépôt (ou uniquement le différentiel sur une PR)
-          extra_args: --only-verified
+          # Désactive la vérification pour faire apparaître les faux secrets de test
+          extra_args: --no-verification
